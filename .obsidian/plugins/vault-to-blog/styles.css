@@ -1,0 +1,103 @@
+/* Status bar */
+.vtb-grayscale {
+	filter: grayscale(100%);
+}
+
+.vtb-status-bar-icon {
+	width: 20px;
+	height: 20px;
+}
+
+/* Setting container */
+.vtb-setting-container {
+	display: grid;
+	grid-template-rows: 1fr auto;
+}
+.vtb-setting {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.vtb-control {
+	display: grid;
+	grid-template-columns: 1fr auto;
+}
+
+.vtb-name, .vtb-desc {
+	width: fit-content;
+}
+
+/* Setting tab text, contents */
+.vtb-current-value {
+	color: var(--text-muted);
+	font-size: 0.8rem;
+	padding-left: 1rem;
+	padding-bottom: 1rem;
+}
+
+.vtb-warning {
+	color: var(--text-warning);
+	font-weight: bold;
+}
+
+.vtb-current-value:before {
+	content: '✅ ';
+}
+
+/* awesomplete 스타일 덮어쓰기 */
+.awesomplete {
+	width: 100%;
+	max-width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.awesomplete mark {
+	background: inherit;
+	color: inherit;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.awesomplete [role="status"] {
+	display: none;
+}
+
+.awesomplete ul {
+	position: absolute;
+	max-height: 300px;
+	overflow-y: auto;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: var(--background-primary);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 5px;
+	box-shadow: var(--shadow-elevation-low);
+	z-index: 10;
+}
+
+.awesomplete li {
+	margin: 5px;
+	padding: 5px;
+	cursor: pointer;
+	list-style: none;
+	font-family: var(--font-family-editor);
+	color: var(--text-normal);
+	border-radius: 5px;
+}
+
+.awesomplete li:hover,
+.awesomplete li[aria-selected="true"] {
+	background-color: var(--background-modifier-hover);
+}
+
+/* Setting buttons */
+.vtb-button-row.vtb-active .vtb-activate-button {
+	display: none;
+}
+
+.vtb-button-row.vtb-deactive .vtb-deactivate-button {
+	display: none;
+}

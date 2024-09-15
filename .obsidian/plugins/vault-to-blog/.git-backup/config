@@ -1,0 +1,10 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "blog"]
+	url = git@github.com:barkstone3/barkstone3.github.io.git
+	fetch = +refs/heads/*:refs/remotes/blog/*
